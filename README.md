@@ -41,24 +41,42 @@ bash <(curl -fsSL https://raw.githubusercontent.com/latiao-22-11-13/Debian-ron/m
 
 ### 也可以不装别名，单独直接运行某个脚本
 
+> 把鼠标停在下面任一条目右上角会显示一个 **复制按钮**，点一下整行 URL 就到剪贴板了，再贴到终端即可。
+
+系统自动更新 — apt 升级 + 清理旧内核
+
 ```bash
-# 系统自动更新 - apt 升级 + 清理旧内核
-bash <(curl -fsSL https://raw.githubusercontent.com/latiao-22-11-13/Debian-ron/main/auto-update.sh)
+https://raw.githubusercontent.com/latiao-22-11-13/Debian-ron/main/auto-update.sh
+```
 
-# Caddy 安装/卸载 - 自动 HTTPS 的 Web/反代服务器
-bash <(curl -fsSL https://raw.githubusercontent.com/latiao-22-11-13/Debian-ron/main/caddy-manager.sh)
+Caddy 安装/卸载 — 自动 HTTPS 的 Web/反代服务器
 
-# nftables 防火墙 - 端口同步、防扫描、远程开关
-bash <(curl -fsSL https://raw.githubusercontent.com/latiao-22-11-13/Debian-ron/main/fw.sh)
+```bash
+https://raw.githubusercontent.com/latiao-22-11-13/Debian-ron/main/caddy-manager.sh
+```
 
-# 安装 XanMod main 内核 - 比 Debian 默认内核性能更好
-bash <(curl -fsSL https://raw.githubusercontent.com/latiao-22-11-13/Debian-ron/main/install-xanmod.sh)
+nftables 防火墙 — 端口同步、防扫描、远程开关
 
-# 网络参数优化 - 开启 BBR + 调整缓冲区
-bash <(curl -fsSL https://raw.githubusercontent.com/latiao-22-11-13/Debian-ron/main/net-optimization.sh)
+```bash
+https://raw.githubusercontent.com/latiao-22-11-13/Debian-ron/main/fw.sh
+```
 
-# Singbox nftables 配置 - 代理节点出站分流
-bash <(curl -fsSL https://raw.githubusercontent.com/latiao-22-11-13/Debian-ron/main/switch_nftable.sh)
+安装 XanMod main 内核 — 比 Debian 默认内核性能更好
+
+```bash
+https://raw.githubusercontent.com/latiao-22-11-13/Debian-ron/main/install-xanmod.sh
+```
+
+网络参数优化 — 开启 BBR + 调整缓冲区
+
+```bash
+https://raw.githubusercontent.com/latiao-22-11-13/Debian-ron/main/net-optimization.sh
+```
+
+Singbox nftables 配置 — 代理节点出站分流
+
+```bash
+https://raw.githubusercontent.com/latiao-22-11-13/Debian-ron/main/switch_nftable.sh
 ```
 
 > 国内 VPS 若访问 raw 失败，把链接前缀换成：`https://cdn.jsdelivr.net/gh/latiao-22-11-13/Debian-ron@main`
