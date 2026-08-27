@@ -25,26 +25,39 @@ bash <(curl -fsSL https://raw.githubusercontent.com/latiao-22-11-13/Debian-ron/m
 bash <(curl -fsSL https://raw.githubusercontent.com/latiao-22-11-13/Debian-ron/main/setup-alias.sh) && source ~/.bashrc
 ```
 
-安装后可用快捷命令：
+### 快捷命令一览
 
-| 快捷命令 | 功能 |
-|---|---|
-| `ron` | 打开交互式工具箱菜单 |
-| `ron-update` | 系统自动更新 (auto-update.sh) |
-| `ron-caddy` | Caddy 安装卸载 (caddy-manager.sh) |
-| `ron-fw` | nftables 防火墙配置 (fw.sh) |
-| `ron-xanmod` | 安装 XanMod main 内核 (install-xanmod.sh) |
-| `ron-netopt` | 网络参数优化 (net-optimization.sh) |
-| `ron-singbox` | Singbox nftables 配置 (switch_nftable.sh) |
+| 命令 | 作用 | 什么时候用 |
+|---|---|---|
+| `ron` | 打开交互式菜单 | 不记得命令名时，用菜单点选即可 |
+| `ron-update` | 系统自动更新 (`auto-update.sh`) | 日常跑 `apt upgrade`，自动清理旧内核 |
+| `ron-caddy` | Caddy 安装/卸载 (`caddy-manager.sh`) | 需要 Web 服务器或反向代理（自动 HTTPS）时 |
+| `ron-fw` | nftables 防火墙 (`fw.sh`) | 给 VPS 配端口同步/防扫描，或远程开端口 |
+| `ron-xanmod` | 安装 XanMod main 内核 (`install-xanmod.sh`) | 系统装好第一件事，跑生产环境更稳更快 |
+| `ron-netopt` | 网络参数优化 (`net-optimization.sh`) | 开启 BBR、调整缓冲区，让带宽跑满 |
+| `ron-singbox` | Singbox nftables 配 (`switch_nftable.sh`) | 搭配代理节点，自动出站分流规则 |
 
-也可以不装别名，单独直接运行某个脚本：
+> 提示：脚本运行时会自己用 `sudo` 提权，首次需要输入当前用户密码。
+
+### 也可以不装别名，单独直接运行某个脚本
 
 ```bash
+# 系统自动更新 - apt 升级 + 清理旧内核
 bash <(curl -fsSL https://raw.githubusercontent.com/latiao-22-11-13/Debian-ron/main/auto-update.sh)
+
+# Caddy 安装/卸载 - 自动 HTTPS 的 Web/反代服务器
 bash <(curl -fsSL https://raw.githubusercontent.com/latiao-22-11-13/Debian-ron/main/caddy-manager.sh)
+
+# nftables 防火墙 - 端口同步、防扫描、远程开关
 bash <(curl -fsSL https://raw.githubusercontent.com/latiao-22-11-13/Debian-ron/main/fw.sh)
+
+# 安装 XanMod main 内核 - 比 Debian 默认内核性能更好
 bash <(curl -fsSL https://raw.githubusercontent.com/latiao-22-11-13/Debian-ron/main/install-xanmod.sh)
+
+# 网络参数优化 - 开启 BBR + 调整缓冲区
 bash <(curl -fsSL https://raw.githubusercontent.com/latiao-22-11-13/Debian-ron/main/net-optimization.sh)
+
+# Singbox nftables 配置 - 代理节点出站分流
 bash <(curl -fsSL https://raw.githubusercontent.com/latiao-22-11-13/Debian-ron/main/switch_nftable.sh)
 ```
 
